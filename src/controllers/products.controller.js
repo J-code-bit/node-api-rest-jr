@@ -29,3 +29,11 @@ export const getProductById = (req, res)=>{
     res.json(product);
 };
 
+export const createProduct = (req,res) => {
+    const {name, price} = req.body;
+
+    const newProduct = model.createProduct({name, price});
+
+    res.status(201).json(newProduct);
+
+};

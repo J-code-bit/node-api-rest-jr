@@ -9,7 +9,6 @@ const json = fs.readFileSync(jsonPath, "utf-8");
 
 const products = JSON.parse(json);
 
-//console.log(products);
 
 export const getAllProducts = () => {
     return products;
@@ -17,4 +16,17 @@ export const getAllProducts = () => {
 
 export const getProductById = (id) => {
     return products.find((item) => item.id == id);
+};
+
+
+export const createProduct = (data) => {
+    const newProduct = {
+        id: products.length + 1,
+        ...data,
+    };
+
+    products.push(newProduct);
+
+    fs.writeFileSync(jsonPath,JSON.stringify(products));
+    return newProduct;
 };

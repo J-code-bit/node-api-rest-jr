@@ -14,28 +14,15 @@ const products = [
 import { 
     getAllProducts, 
     searchProduct,
-    getProductById 
+    getProductById,
+    createProduct 
 } from "../controllers/products.controller.js";
 
 router.get('/products',getAllProducts);
 router.get('/products/search',searchProduct);
 router.get('/products/:id',getProductById);
 
-router.post('/products', (req,res) => {
-    //const {nombre,precio} = req.body;
-    //const newProduct = {
-    //  id: product.length + 1,
-    //  nombre,
-    //  precio
-    //};
-
-    //products.push(newProduct);
-
-    //res.status(201).json(newProduct);
-
-    console.log(req.body);
-    res.send('POST');
-});
+router.post('/products',createProduct);
 
 router.put('/products/:id', (req, res) => {
     const productId = parseInt(req.params.id, 10);
