@@ -1,23 +1,27 @@
-import * as service from "../services/products.service.js";
+import * as model from "../models/products.model.js";
 
 export const getAllProducts = (req, res)=>{
-    res.json(service.getAllProducts());
+    const products = model.getAllProducts();
+    res.json(products);
 };
 
 
 export const searchProduct = (req, res) => {
-    const {nombre} = req.query
+    const {name} = req.query;
+
+    const products = model.getAllProducts();
+
     const filteredProducts = products.filter ((p) => 
-        p.nombre.toLowerCase().includes(nombre.toLowerCase())
+        p.name.toLowerCase().includes(name.toLowerCase())
 );
     res.json(filteredProducts);
 };
 
 
 export const getProductById = (req, res)=>{
+    const {id} = req.params;
 
-    const {id} = req.params
-    const product = products.find((item) => item.id == id);
+    const product =  model.getProductById(id);
 
     if (!product){
         res.status(404).json({error: 'No existe el producto'});
