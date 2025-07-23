@@ -15,7 +15,8 @@ import {
     getAllProducts, 
     searchProduct,
     getProductById,
-    createProduct 
+    createProduct,
+    deleteProduct 
 } from "../controllers/products.controller.js";
 
 router.get('/products',getAllProducts);
@@ -38,17 +39,7 @@ router.put('/products/:id', (req, res) => {
     res.json(products[productIndex]);
 });
 
-router.delete('/products/:id', (req, res) => {
-    const productId = parseInt(req.params.id, 10);
-    const productIndex = products.findIndex((p) => p.id === productId);
-
-    if (productIndex === -1) {
-        return res.status(404).json({error: 'Producto no encontrado'});
-    }
-
-    products.splice(productIndex, 1);
-    res.status(204).send();
-});
+router.delete('/products/:id', deleteProduct);
 
 
 export default router;

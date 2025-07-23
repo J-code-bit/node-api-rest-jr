@@ -37,3 +37,16 @@ export const createProduct = (req,res) => {
     res.status(201).json(newProduct);
 
 };
+
+export const deleteProduct = (req, res) => {
+    const productId = parseInt(req.params.id, 10);
+
+    const product = model.deleteProduct(productId);
+
+    if (!product) {
+        return res.status(404).json({error: 'Producto no encontrado'});
+    }
+
+
+    res.status(204).send();
+};
