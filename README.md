@@ -80,7 +80,8 @@
 ## Configuración de Variables de Entorno
 ##### Crea un archivo .env en la raíz del proyecto con las siguientes variables:
 
-##### ```PORT=3000
+```
+##### PORT=3000 
 ##### FIREBASE_API_KEY="tu_api_key_de_firebase"
 ##### FIREBASE_AUTH_DOMAIN="tu_auth_domain_de_firebase"
 ##### FIREBASE_PROJECT_ID="tu_project_id_de_firebase"
@@ -88,8 +89,8 @@
 ##### FIREBASE_MESSAGING_SENDER_ID="tu_messaging_sender_id_de_firebase"
 ##### FIREBASE_APP_ID="tu_app_id_de_firebase"
 ##### FIREBASE_MEASUREMENT_ID="tu_measurement_id_de_firebase"
-##### JWT_SECRET="una_clave_secreta_fuerte_para_jwt"```
-
+##### JWT_SECRET="una_clave_secreta_fuerte_para_jwt"
+```
 ##### Nota: Consultar la sección Configuración de Firebase para obtener credenciales.
 
 ## Ejecución del Proyecto
