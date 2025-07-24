@@ -37,30 +37,31 @@
 
 
 ## Estructura del Proyecto
-##### .
-##### ├── .env                  # Variables de entorno
-##### ├── .vercel                # Configuración de Vercel
-##### │   └── project.json
-##### ├── index.js              # Punto de entrada principal
-##### ├── package.json          # Metadatos y dependencias
-##### ├── vercel.json           # Configuración de despliegue en Vercel
-##### └── src/
-#####    ├── config/
-#####    │   └── firebase.js   # Configuración de Firebase
-#####    ├── controllers/
-#####    │   ├── auth.controller.js
-#####    │   └── products.controller.js
-#####    ├── middlewares/
-#####    │   └── auth.middleware.js # Middleware de autenticación JWT
-#####    ├── models/
-#####    │   ├── auth.model.js
-#####    │   └── products.model.js
-#####    ├── routes/
-#####    │   ├── auth.routes.js
-#####    │   └── products.routes.js
-#####    └── services/
-#####        ├── auth.service.js
-#####        └── products.service.js
+```##### .
+ ├── .env                  # Variables de entorno
+ ├── .vercel                # Configuración de Vercel
+ │   └── project.json
+ ├── index.js              # Punto de entrada principal
+ ├── package.json          # Metadatos y dependencias
+ ├── vercel.json           # Configuración de despliegue en Vercel
+ └── src/
+    ├── config/
+    │   └── firebase.js   # Configuración de Firebase
+    ├── controllers/
+    │   ├── auth.controller.js
+    │   └── products.controller.js
+    ├── middlewares/
+    │   └── auth.middleware.js # Middleware de autenticación JWT
+    ├── models/
+    │   ├── auth.model.js
+    │   └── products.model.js
+    ├── routes/
+    │   ├── auth.routes.js
+    │   └── products.routes.js
+    └── services/
+        ├── auth.service.js
+        └── products.service.js
+```
 
 
 ## Primeros Pasos
@@ -80,17 +81,17 @@
 ## Configuración de Variables de Entorno
 ##### Crea un archivo .env en la raíz del proyecto con las siguientes variables:
 
-```
-##### PORT=3000 
-##### FIREBASE_API_KEY="tu_api_key_de_firebase"
-##### FIREBASE_AUTH_DOMAIN="tu_auth_domain_de_firebase"
-##### FIREBASE_PROJECT_ID="tu_project_id_de_firebase"
-##### FIREBASE_STORAGE_BUCKET="tu_storage_bucket_de_firebase"
-##### FIREBASE_MESSAGING_SENDER_ID="tu_messaging_sender_id_de_firebase"
-##### FIREBASE_APP_ID="tu_app_id_de_firebase"
-##### FIREBASE_MEASUREMENT_ID="tu_measurement_id_de_firebase"
-##### JWT_SECRET="una_clave_secreta_fuerte_para_jwt"
-```
+#####```
+PORT=3000 
+FIREBASE_API_KEY="tu_api_key_de_firebase"
+FIREBASE_AUTH_DOMAIN="tu_auth_domain_de_firebase"
+FIREBASE_PROJECT_ID="tu_project_id_de_firebase"
+FIREBASE_STORAGE_BUCKET="tu_storage_bucket_de_firebase"
+FIREBASE_MESSAGING_SENDER_ID="tu_messaging_sender_id_de_firebase"
+FIREBASE_APP_ID="tu_app_id_de_firebase"
+FIREBASE_MEASUREMENT_ID="tu_measurement_id_de_firebase"
+JWT_SECRET="una_clave_secreta_fuerte_para_jwt"
+#####```
 ##### Nota: Consultar la sección Configuración de Firebase para obtener credenciales.
 
 ## Ejecución del Proyecto
@@ -152,4 +153,7 @@
 ## Enlaces del proyecto:
 ### [Vercel]: (https://node-api-rest-jr.vercel.app) 
 ### [gitHub]: (https://github.com/J-code-bit/node-api-rest-jr.git)
+
+
+### Author: Jimena Soledad Ruiz
 
